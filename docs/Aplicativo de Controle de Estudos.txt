@@ -1,0 +1,11 @@
+Aplicativo de Controle de Estudos
+- Deve ser possível adicionar disciplinas e conteúdos dessas disciplinas;
+- Controle de tempo (Técnica pomodoro);
+- O controle de tempo pode ser vinculado em um disciplina e conteúdo;
+- Deve ter uma aba de plano para calendário e provas, trabalhos e atividades;
+- Aba de notas com opção de média e do usuário colocar calculo de notas próprios;
+- Na aba de trabalho têm as seguintes opções: Titulo do trabalho/tarefa, disciplina vinculada, tipo (Redação, Lista de exercícios, laboratório, leitura, prova, projeto, outro), seleção de data (intervalo ou data de entrega), notas (descrever o que deve fazer ou alguma coisa sobre);
+- Na aba de prova têm as seguintes opções: prova/disciplina, disciplina vinculada, data da prova, nível de dificuldade (fácil, médio, difícil e brutal) (aqui terá os dias necessários de foco de acordo com o nível de dificuldade)
+- Na aba de disciplina têm as opções: nome da disciplina, paleta de cores (mínimo 8) para diferenciar as disciplinas, data da aula (opcional)
+- Na aba de notas têm as opções: a disciplina, nota, peso (opcional), data (esse campo é relacionado a data que foi liberada a nota ou previsão)
+- Na aba de tempo (técnica pomodoro): Timer, Registro e Estatísticas; Uma opção de foco é essencial;
