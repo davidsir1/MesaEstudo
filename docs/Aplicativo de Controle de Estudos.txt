@@ -10,3 +10,4 @@ Aplicativo de Controle de Estudos
 - Na aba de notas têm as opções: a disciplina, nota, peso (opcional), data (esse campo é relacionado a data que foi liberada a nota ou previsão)
 - Na aba de tempo (técnica pomodoro): Timer, Registro e Estatísticas; Uma opção de foco é essencial;
 - Sicronização com uma conta e conta convidado os dados são armazenados localmente;
+- Recurso diferencial: Sala de estudos, os usuários podem criar e compartilhar salas de estudos com outros usuários
