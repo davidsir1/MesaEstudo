@@ -5,7 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_study">
 
-    <fragment
+    <!--<fragment
         android:id="@+id/nav_transform"
         android:name="com.example.mesaestudo.ui.transform.TransformFragment"
         android:label="@string/menu_transform"
@@ -21,12 +21,12 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.mesaestudo.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_slideshow" />-->
     <fragment
         android:id="@+id/nav_result"
         android:name="com.example.mesaestudo.ui.result.ResultFragment"
         android:label="@string/menu_notas"
-        tools:layout="@layout/fragment_notes" />
+        tools:layout="@layout/fragment_result" />
     <fragment
         android:id="@+id/nav_timer"
         android:name="com.example.mesaestudo.ui.timer.TimerFragment"
