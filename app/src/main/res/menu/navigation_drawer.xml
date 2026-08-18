@@ -18,19 +18,19 @@
             android:title="@string/menu_slideshow" />-->
         <item
             android:id="@+id/nav_study"
-            android:icon="@drawable/ic_slideshow_black_24dp"
+            android:icon="@drawable/book_ribbon_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
             android:title="@string/menu_estudar" />
         <item
             android:id="@+id/nav_plan"
-            android:icon="@drawable/ic_slideshow_black_24dp"
+            android:icon="@drawable/calendar_month_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
             android:title="@string/menu_plano" />
         <item
             android:id="@+id/nav_result"
-            android:icon="@drawable/ic_slideshow_black_24dp"
+            android:icon="@drawable/license_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
             android:title="@string/menu_notas" />
         <item
             android:id="@+id/nav_timer"
-            android:icon="@drawable/ic_slideshow_black_24dp"
+            android:icon="@drawable/timer_24dp_1f1f1f_fill0_wght400_grad0_opsz24"
             android:title="@string/menu_timer" />
         <item
             android:id="@+id/nav_settings"
