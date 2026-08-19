@@ -8,6 +8,7 @@
     android:id="@+id/frameLayout2" >
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutTimer"
         android:layout_width="357dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -30,4 +31,14 @@
             android:layout_height="wrap_content"
             android:text="Estatística" />
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerTimer"
+        android:layout_width="409dp"
+        android:layout_height="645dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutTimer" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
