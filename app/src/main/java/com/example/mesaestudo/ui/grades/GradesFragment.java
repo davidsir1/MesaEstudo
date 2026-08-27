@@ -1,66 +1,89 @@
 package com.example.mesaestudo.ui.grades;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.mesaestudo.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link GradesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
+
 public class GradesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Button btnAddGrade;
 
     public GradesFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NotesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static GradesFragment newInstance(String param1, String param2) {
         GradesFragment fragment = new GradesFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_grades, container, false);
+        View view = inflater.inflate(R.layout.fragment_grades, container, false);
+
+        btnAddGrade = view.findViewById(R.id.button4);
+        btnAddGrade.setOnClickListener(v -> showAddGradeDialog());
+
+        return view;
+    }
+
+    private void showAddGradeDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_add_grade, null);
+        builder.setView(dialogView);
+
+        // Spinner Disciplina (Placeholder)
+        Spinner spinnerGradeDiscipline = dialogView.findViewById(R.id.spinnerGradeDiscipline);
+        List<String> disciplines = new ArrayList<>();
+        disciplines.add("Selecione uma disciplina...");
+        ArrayAdapter<String> adapterDisc = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, disciplines);
+        adapterDisc.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerGradeDiscipline.setAdapter(adapterDisc);
+
+        EditText etGradeDate = dialogView.findViewById(R.id.etGradeDate);
+        etGradeDate.setOnClickListener(v -> showDatePicker(etGradeDate));
+
+        builder.setPositiveButton("Adicionar Nota", (dialog, which) -> {
+            // Lógica de adicionar será implementada futuramente
+        });
+        builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
+
+        builder.create().show();
+    }
+
+    private void showDatePicker(EditText editText) {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), (view, year1, month1, dayOfMonth) -> {
+            String date = String.format(Locale.getDefault(), "%02d/%02d/%d", dayOfMonth, month1 + 1, year1);
+            editText.setText(date);
+        }, year, month, day);
+        datePickerDialog.show();
     }
 }
