@@ -88,7 +88,7 @@ public class TimerFragment extends Fragment {
                     tab.setText("Registro");
                     break;
                 case 2:
-                    tab.setText("Estatística");
+                    tab.setText("Estatísticas");
                     break;
             }
         }).attach();

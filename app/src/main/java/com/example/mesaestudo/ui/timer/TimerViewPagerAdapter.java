@@ -15,9 +15,9 @@ public class TimerViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 1:
-                return new RecordFragment();
+                return new LogStudyFragment();
             case 2:
-                return new StatisticsFragment();
+                return new RecordFragment();
             case 0:
             default:
                 return new TimerClockFragment();
