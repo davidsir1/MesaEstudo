@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Disciplina"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etDisciplineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da Disciplina (ex: Cálculo I)"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma cor"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutColorPalette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- As cores serão representadas por Views circulares ou quadradas -->
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#FF5722"/>
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#E91E63"/>
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#9C27B0"/>
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#2196F3"/>
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#4CAF50"/>
+            <View android:layout_width="40dp" android:layout_height="40dp" android:layout_margin="4dp" android:background="#FFEB3B"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
