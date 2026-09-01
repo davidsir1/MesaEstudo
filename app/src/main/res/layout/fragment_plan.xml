@@ -111,6 +111,7 @@
                 android:text="Calendário" />
 
             <ListView
+                android:id="@+id/listViewCalendar"
                 android:layout_width="380dp"
                 android:layout_height="145dp"
                 android:layout_marginTop="12dp">
